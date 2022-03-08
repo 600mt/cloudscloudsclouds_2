@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+  <div id="nav" class="row">
+      <div class="col-3" style="text-align:left; padding-left:5%;" > 
+        <p class="intro-text blink_me"> LIVE weather-driven collection 
+      </div> 
+      <div class="col-6">  
+        <p class="intro-text"> A cloud of clouds by clouds </p> <br>
+      </div>
+      <div id="about1"class="col-3" style="text-align:right; padding-right:4%;">
+        <button id="abutton"> About the project </button>
+      </div>
+
+  </div>
+
+  <div id="about" class="container">
+
+    <div class="row">  
+      <div class="col-3" id="about-title" style="text-align:left"> 
+        <p style="opacity:1"> ABOUT </p>  
+      </div>
+      <div class="col-3" id="about-title" style="text-align:center"> 
+        <p style="opacity:0.4"> </p>  
+      </div>
+      <div class="col-3" id="about-title" style="text-align:center"> 
+        <p style="opacity:0.4"> </p>  
+      </div>
+      <div class="col-3" id="about-title" style="text-align:right"> 
+        <p style="opacity:0.4" id="close"> CLOSE </p>  
+      </div>
+    </div>
+
+    <div class="row" id="about-text">  
+      <div class="col-12" id="cloud urgency"> <p> 
+        During the 17th century, Dutch painters in particular began to give massive importance to the sky, leaving almost the entire height of the canvas to its representation. The new sensitivity towards this subject came along with the first nomenclature of clouds made in 1802, for which cloudscape paintings were used as a kind of rudimental meteorological data. The Depot contains hundreds of these artworks, although not really showing them: ironically, the only thing that is always visible is the sky and the clouds reflecting on the building. Cloud of clouds by clouds, is an alternative exploration of the hidden Depot Boijmans' cloudscape collection: it works as a "cloud" platform that contains clouds paintings which are filtered according to the actual presence of clouds above the Depot: an instant tool to visualize current weather conditions, but also an ever changing online exhibition.
+        </p>  <br>
+      </div> 
+
+      <div class="col-12" id="project"> <p class="text2"> Horizon line height in dutch cloudscape paintings and its average dimension per century,
+        <img class="graph" src="img/graph2-01.png">
+        </p>  
+      </div>
+
+      <div class="col-12" id="cloud urgency"></div>
+      <p class="text2"> Paintings divided according to day time and weather conditions.
+      <img class="graph" src="img/grafico1.png"> 
+      </p>
+      </div> 
+    </div>
+  </div>
+  
+  <div id="nav-info">
+      <p class="info-text" id="time">00:00</p><br>
+      <p class="info-text" id="city"></p><br>  
+      <p class="info-text" id="weather"></p>
+      <p class="info-text" id="author"></p>
+  </div>
+</div>
+
+
+
+  <div class="row" id="image-placeholder">
+  </div>
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+      <script src="js/script.js"></script>
+
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
+
+<style>
+  @font-face {
+    font-family: "SF reg";
+    src: url(font/SF-Pro-Rounded-Regular.otf);
+  }
+  body {
+    background-color:#e2e6ec;
+    margin: 1vw;
+    text-align: center;
+  }  
+  img {
+    max-width:100%;
+    padding:0%;
+  }
+  .container {
+    max-width:100vw;
+    padding:0%;
+  }
+  #nav {
+    margin-top:4vh;
+    margin-bottom: 1vh;
+    align-items: center;
+  }
+  #nav-info {
+    margin-top:4vh;
+    margin-bottom: 1vh;
+    align-items: center;
+    position:relative;
+  }
+  .graph {
+    display:block;
+  }
+  .text2 {
+    font-size:60%;
+  }
+  .blink_me {
+  animation: blinker 0.7s linear infinite;
+  }
+@keyframes blinker {
+  50% {
+    opacity: 0;
+    }
+  }
+  #about1 { 
+    text-align: right;
+  }
+  #about {
+    display:none;
+    background-color:aliceblue;
+    width: 100vw;
+    height: 220vh;
+    border-radius:50px;
+    position: absolute;
+    margin-top: 2%;
+    opacity:0.9;
+    z-index: 9;
+    align-items: center;
+  }
+  #abutton {
+    display: inline;
+    cursor: none;
+    border: none;
+    font-family: 'SF reg', sans-serif;
+    background-color:rgba(0, 0, 0, 0.082);
+    border-radius:5vh;
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom:2%;
+    padding-top:2%;
+    color:black;
+    font-weight: 500;
+    font-size: 80%;
+    z-index:-99;
+  }
+
+  .intro-text {
+    display: inline;
+    font-family: 'SF reg', sans-serif;
+    color:black;
+    opacity:80%;
+    font-weight: 600;
+    font-size: 80%;
+  }
+  #about-title {
+    display: block;
+    font-family: 'SF reg', sans-serif;
+    color:black;
+    opacity:100%;
+    font-weight: 800;
+    font-size: 100%;
+    text-align: left;
+    padding-left:5vw;
+    padding-right:5vw;
+    padding-top:3vh;
+  }
+  #title-row {
+    padding:3%;
+  }
+  #about-text {
+    display: block;
+    font-family: 'SF reg', sans-serif;
+    color:black;
+    opacity:100%;
+    font-weight: 700;
+    font-size: 180%;
+    text-align: center;
+    padding-left:10vw;
+    padding-right:10vw;
+    padding-top:10vh;
+  }
+  .info-text {
+    display: inline;
+    font-family: 'SF reg', sans-serif;
+    font-weight: 500;
+    font-size: 250%;
+    text-transform: capitalize;
+  }
+  .img-landscape {
+    width: 32.2%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    object-fit: cover;
+  }
+  #image-placeholder {
+    display: block;
+    flex-wrap: wrap;
+    background-size: contain;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    margin-top: 2%;
+    z-index: -1;
+    object-fit: cover;
+  }
+</style>
