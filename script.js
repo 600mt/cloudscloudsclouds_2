@@ -173,7 +173,7 @@ function refreshTime() {
 // fetches the city name and the current weather data
 function checkWeatherData() {
 
-  fetch('https://api.openweathermap.org/data/2.5/weather?id=2747891&appid=50be98d56f5d6df421f998f3056ad660')
+  fetch('https://api.openweathermap.org/data/2.5/weather?id=5134453&appid=50be98d56f5d6df421f998f3056ad660')
     .then(response => {
       return response.json();
     })
