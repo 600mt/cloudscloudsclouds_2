@@ -7,6 +7,7 @@
   <meta name="author" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/img/ccc.png">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -46,18 +47,18 @@
     <div class="row" id="about-text">  
       <div class="col-12" id="cloud urgency"> <p> 
         During the 17th century, Dutch painters in particular began to give massive importance to the sky, leaving almost the entire height of the canvas to its representation. The new sensitivity towards this subject came along with the first nomenclature of clouds made in 1802, for which cloudscape paintings were used as a kind of rudimental meteorological data. The Depot contains hundreds of these artworks, although not really showing them: ironically, the only thing that is always visible is the sky and the clouds reflecting on the building. Cloud of clouds by clouds, is an alternative exploration of the hidden Depot Boijmans' cloudscape collection: it works as a "cloud" platform that contains clouds paintings which are filtered according to the actual presence of clouds above the Depot: an instant tool to visualize current weather conditions, but also an ever changing online exhibition.
-        </p>  <br>
+        </p>  <br> <br>
       </div> 
 
-      <div class="col-12" id="project"> <p class="text2"> Horizon line height in dutch cloudscape paintings and its average dimension per century.
+      <div class="col-12" id="project"> <p class="text2"> Horizon line height in dutch cloudscape paintings and its average dimension per century. </p>
         <img class="graph" src="img/graph2-01.png">
-        </p>  
+          
       </div>
 
       <div class="col-12" id="cloud urgency"></div>
-      <p class="text2"> Paintings divided according to day time and weather conditions.
-      <img class="graph" src="img/grafico1.png"> 
-      </p>
+      <p class="text2"> Paintings divided according to day time and weather conditions.   </p> <br>
+      <img class="graph2" src="img/grafico1.png"> 
+  
       </div> 
     </div>
   </div>
@@ -123,6 +124,10 @@
   .graph {
     display:block;
   }
+  .graph2 {
+    display:block;
+    padding-bottom: 10%;
+  }
   .text2 {
     font-size:60%;
   }
@@ -141,7 +146,7 @@
     display:none;
     background-color:aliceblue;
     width: 100vw;
-    height: 220vh;
+    height: fit-content;
     border-radius:50px;
     position: absolute;
     margin-top: 2%;
@@ -151,7 +156,6 @@
   }
   #abutton {
     display: inline;
-    cursor: none;
     border: none;
     font-family: 'SF reg', sans-serif;
     background-color:rgba(0, 0, 0, 0.082);
